@@ -1,0 +1,61 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+   
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: oklch(76.8% 0.233 130.85);
+  --color-dark: oklch(20.8% 0.042 265.755);
+  --color-secondary: oklch(55.4% 0.046 257.417);
+  --container: {
+    center: true,
+    padding: '16px',
+  };
+  --screens: {
+    '2xl': '1320px',
+  }
+   /* Override font-sans */
+    --font-*: initial;
+    --font-sans: "Inter", sans-serif;
+
+
+      /* Custom font */
+    --font-primary: "Roboto", sans-serif;
+    --font-logo: "Bebas Neue", sans-serif;
+    
+    /* Override shadow */
+    --shadow-*: initial;
+    --shadow-md: inset 0 -1px 0 0 rgba(0, 0, 0, 0.4);
+  
+}
+
+ 
+
+@utility tab-4 {
+  tab-size: 4;
+}
+
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white/70  backdrop-blur-lg shadow-md;
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45 
+}
